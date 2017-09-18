@@ -15,13 +15,13 @@ function runSetup {
 
 function processSetup {
   echo "$SETUP_INDICATOR  ${1%.sh}"
-  runSetup willSetup $1
-  runSetup setup $1
-  runSetup didSetup $1
+  runSetup willSetup ${1%.sh}
+  runSetup setup ${1%.sh}
+  runSetup didSetup ${1%.sh}
 }
 
 function processAll {
-  for entry in ./$1/*.sh ;do
+  for entry in ./$1/* ;do
     processSetup ${entry##*/}
   done
 }

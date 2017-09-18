@@ -1,4 +1,4 @@
-curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh| zsh
+git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
 
 sudo chsh -s /bin/zsh
 

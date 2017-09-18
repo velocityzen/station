@@ -24,6 +24,14 @@ trash() {
   rm -rf ~/Dropbox/.dropbox.cache
 }
 
+# directories
+alias 'bk=cd $OLDPWD'
+
+alias p='cd ~/Projects'
+alias d='cd ~/Downloads'
+
+alias bu='brew update; brew upgrade; brew cleanup; brew doctor'
+
 # IP addresses
 alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
 
@@ -45,13 +53,12 @@ alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.ar
 # (useful when executing time-consuming commands)
 alias badge="tput bel"
 
-alias p='cd ~/Projects'
-alias d='cd ~/Downloads'
-
 alias s='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl .'
 alias ss='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 
 alias diff='git difftool'
+
+alias please='sudo !!'
 
 alias webdev='open http://localhost:3000'
 alias g='git'

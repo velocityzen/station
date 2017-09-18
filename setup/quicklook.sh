@@ -1,0 +1,1 @@
+brew cask install qlcolorcode qlstephen qlcommonmark quicklook-json qlprettypatch qlimagesize webpquicklook quicklookase qlvideo

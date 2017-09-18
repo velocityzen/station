@@ -1,0 +1,19 @@
+#!/bin/bash
+if [ "$1" = backup ]; then
+  mkdir -p ~/Dropbox/Apps/backups && tar -cZf ~/Dropbox/Apps/backups/ssh.tgz -C ~ .ssh
+  exit
+fi
+
+if [ "$1" = restore ]; then
+	tar xzf ~/Dropbox/Apps/backups/ssh.tgz -C ~/
+  exit
+fi
+
+if [ "$1" = delete ]; then
+	rm ~/Dropbox/Apps/backups/ssh.tgz
+  exit
+fi
+
+echo "usage:"
+echo " ./ssh backup|restore|delete"
+exit 0

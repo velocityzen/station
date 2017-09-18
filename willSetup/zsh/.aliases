@@ -1,4 +1,4 @@
-function pfd() {
+pfd() {
   osascript 2>/dev/null <<EOF
     tell application "Finder"
       return POSIX path of (target of window 1 as alias)
@@ -6,22 +6,22 @@ function pfd() {
 EOF
 }
 
-function cdf() {
+cdf() {
   cd "$(pfd)"
 }
 
-function trash() {
+trash() {
   if [[ "$1" =~ ^[-]?[aA]{1}(ll)*$ ]]; then
-      sudo rm -rvf ~/Library/Logs/*
-      sudo rm -rvf /Library/Logs/*
-      sudo rm -rvf /var/log/*
-      sudo rm -rfv /Volumes/*/.Trashes
+      sudo rm -rf ~/Library/Logs/*
+      sudo rm -rf /Library/Logs/*
+      sudo rm -rf /var/log/*
+      sudo rm -rf /Volumes/*/.Trashes
   elif [[ "$1" =~ ^[-]?[uU]{1}(ser)*$ ]]; then
-      rm -rvf ~/Library/Logs/*
+      rm -rf ~/Library/Logs/*
   fi
-  rm -rfv ~/.Trash/*
-  rm -rfv ~/.Trash/.*
-  rm -rfv ~/Dropbox/.dropbox.cache
+  rm -rf ~/.Trash/*
+  rm -rf ~/.Trash/.*
+  rm -rf ~/Dropbox/.dropbox.cache
 }
 
 # IP addresses

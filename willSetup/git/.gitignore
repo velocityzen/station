@@ -1,0 +1,16 @@
+.DS_Store
+node_modules/
+npm-debug.log
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+*.pyc
+
+var
+pids
+logs

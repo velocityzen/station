@@ -10,8 +10,6 @@ zplug "plugins/torrent",   		from:oh-my-zsh
 zplug "plugins/xcode",   		from:oh-my-zsh
 zplug "themes/sorin", as:theme, from:oh-my-zsh
 
-zplug "~/.aliases.zsh", from:local
-
 # Install plugins if there are plugins that have not been installed
 if ! zplug check; then
     printf "Install? [y/N]: "
@@ -22,3 +20,5 @@ fi
 
 # Then, source plugins and add commands to $PATH
 zplug load
+
+source ~/.aliases

@@ -1,2 +1,1 @@
-brew tap caskroom/fonts
-brew cask install font-hasklig
+brew cask install caskroom/fonts/font-hasklig

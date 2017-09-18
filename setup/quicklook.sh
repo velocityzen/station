@@ -1,1 +1,1 @@
-brew cask install qlcolorcode qlstephen qlcommonmark quicklook-json qlprettypatch qlimagesize webpquicklook quicklookase qlvideo
+brew cask install hetimazipql qlcolorcode qlstephen qlcommonmark quicklook-json qlprettypatch qlimagesize webpquicklook quicklookase qlvideo

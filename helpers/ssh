@@ -5,12 +5,12 @@ if [ "$1" = backup ]; then
 fi
 
 if [ "$1" = restore ]; then
-	tar xzf ~/Dropbox/Apps/backups/ssh.tgz -C ~/
+  tar xzf ~/Dropbox/Apps/backups/ssh.tgz -C ~/
   exit
 fi
 
 if [ "$1" = delete ]; then
-	rm ~/Dropbox/Apps/backups/ssh.tgz
+  rm ~/Dropbox/Apps/backups/ssh.tgz
   exit
 fi
 

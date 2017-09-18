@@ -8,7 +8,8 @@ function runSetup {
       SETUP=./$1/$2
       source ./$1/$2/$2.sh
     fi
-    cp ./$1/$2/.* ~/
+    ln -s $PWD/$1/$2/.* ~
+    # cp ./$1/$2/.* ~/
   elif [ -f ./$1/$2.sh ]; then
     SETUP=./$1
     source ./$1/$2.sh

@@ -1,12 +1,9 @@
 #!/bin/zsh
+unsetopt nomatch
+
 HELPERS="$PWD/helpers"
 SETUP_INDICATOR="💥"
 DONE_INDICATOR="💻"
-
-# Ask for the administrator password upfront
-sudo -v
-# Keep-alive: update existing `sudo` time stamp until setup has finished
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 function runSetup {
   if [ -d ./$1/$2 ]; then
@@ -14,8 +11,8 @@ function runSetup {
       SETUP=./$1/$2
       source ./$1/$2/$2.sh
     fi
+
     ln -s $PWD/$1/$2/.* ~
-    # cp ./$1/$2/.* ~/
   elif [ -f ./$1/$2.sh ]; then
     SETUP=./$1
     source ./$1/$2.sh

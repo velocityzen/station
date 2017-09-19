@@ -1,7 +1,3 @@
-###############################################################################
-# Google Chrome & Google Chrome Canary                                        #
-###############################################################################
-
 brew cask install google-chrome
 
 # Allow installing user scripts via GitHub Gist or Userscripts.org

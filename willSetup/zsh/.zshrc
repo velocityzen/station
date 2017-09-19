@@ -1,3 +1,5 @@
+fpath=(/usr/local/share/zsh/site-functions $fpath)
+
 # load zgen
 source "${HOME}/.zgen/zgen.zsh"
 
@@ -16,15 +18,14 @@ if ! zgen saved; then
 
     zgen load zsh-users/zsh-syntax-highlighting
     zgen load zsh-users/zsh-history-substring-search
-
-    # completions
-    zgen load zsh-users/zsh-completions src
+    zgen load zsh-users/zsh-autosuggestions
 
     # theme
     zgen oh-my-zsh themes/sorin
 
     # save all to init script
     zgen save
+    rm -f ~/.zcompdump; compinit
 fi
 
 source ~/.aliases

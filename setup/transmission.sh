@@ -15,11 +15,13 @@ defaults write org.m0k.transmission PeersTotal -int 400
 defaults write org.m0k.transmission PeersTorrent -int 60
 defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool false
 defaults write org.m0k.transmission DownloadAsk -bool false
+defaults write org.m0k.transmission PlayDownloadSound -bool false
 defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
 defaults write org.m0k.transmission WarningRemoveCompleted -bool false
 defaults write org.m0k.transmission WarningDonate -bool false
 defaults write org.m0k.transmission WarningLegal -bool false
 defaults write org.m0k.transmission StatusBar -bool false
+defaults write org.m0k.transmission "NSToolbar Configuration TRMainToolbar" "TB Is Shown" -int 0
 defaults write org.m0k.transmission BadgeDownloadRate -bool false
 defaults write org.m0k.transmission BadgeUploadRate -bool false
 

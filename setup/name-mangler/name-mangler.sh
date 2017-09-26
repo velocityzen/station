@@ -1,6 +1,6 @@
 brew cask install name-mangler
 
-mkdir -p ~/Library/Services && cp "Rename comics.namemanglerservice" ~/Library/Services
+mkdir -p ~/Library/Services && cp -r $SETUP/Rename\ comics.namemanglerservice ~/Library/Services
 
 # Concise list
 defaults write com.manytricks.NameMangler "List Style" -int 0

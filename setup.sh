@@ -1,6 +1,13 @@
 #!/bin/zsh
 unsetopt nomatch
 
+function CFPreferencesAppSynchronize() {
+    python - <<END
+from Foundation import CFPreferencesAppSynchronize
+CFPreferencesAppSynchronize('$1')
+END
+}
+
 HELPERS="$PWD/helpers"
 SETUP_INDICATOR="💥"
 DONE_INDICATOR="💻"
@@ -12,7 +19,9 @@ function runSetup {
       source ./$1/$2/$2.sh
     fi
 
-    ln -s $PWD/$1/$2/.* ~
+    for file in $PWD/$1/$2/.* ; do 
+      ln -s $file ~
+    done
   elif [ -f ./$1/$2.sh ]; then
     SETUP=./$1
     source ./$1/$2.sh
@@ -20,11 +29,10 @@ function runSetup {
 }
 
 function processSetup {
-  echo "$SETUP_INDICATOR  ${1%.sh}"
+  echo "\n$SETUP_INDICATOR  ${1%.sh}"
   runSetup willSetup ${1%.sh}
   runSetup setup ${1%.sh}
   runSetup didSetup ${1%.sh}
-  tput bel
 }
 
 function processAll {

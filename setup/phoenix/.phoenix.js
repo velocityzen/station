@@ -9,7 +9,7 @@ const mCmdAlt = [ 'cmd', 'alt' ]
 const mCmdCtrl = [ 'cmd', 'ctrl' ]
 const mCmdCtrlShift = [ 'cmd', 'ctrl', 'shift' ]
 
-const padding = 0;
+const padding = 2;
 // x, y, width, height
 const layout = {
   fullscreen: [ 0, 0, 1, 1 ],

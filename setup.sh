@@ -19,7 +19,7 @@ function runSetup {
       source ./$1/$2/$2.sh
     fi
 
-    for file in $PWD/$1/$2/.* ; do 
+    for file in $PWD/$1/$2/.* ; do
       ln -s $file ~
     done
   elif [ -f ./$1/$2.sh ]; then

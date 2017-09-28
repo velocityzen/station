@@ -1,6 +1,5 @@
 /*global Phoenix, Key, Event, Window */
 'use strict';
-
 Phoenix.set({
   openAtLogin: true
 });
@@ -29,7 +28,7 @@ const setLayout = function(layout, window = Window.focused()) {
 
   window.setFrame({
     x: Math.round( layout[0] * screen.width ) + padding + screen.x,
-    y: Math.round( layout[1] * screen.height ) + padding + screen.y,
+    y: Math.round( layout[1] * screen.height ) + screen.y,
     width: Math.round( layout[2] * screen.width ) - ( 2 * padding ),
     height: Math.round( layout[3] * screen.height ) - ( 2 * padding )
   });

@@ -24,3 +24,4 @@ defaults write jp.tmkk.XLD AutoLoadCoverDontOverwrite -int 1
 defaults write jp.tmkk.XLD AutoLoadCoverName -string "cover.jpg folder.jpg front.jpg"
 defaults write jp.tmkk.XLD AddiTunes -int 1
 defaults write jp.tmkk.XLD EmbedImages -int 1
+defaults write jp.tmkk.XLD 'NSToolbar Configuration XLDDiscViewToolbar' '{ "TB Default Item Identifiers" = ( "ExtractionMode", "NSToolbarFlexibleSpaceItem", "Extract", "GetMetadata", "EditMetadata", "Burn"); "TB Display Mode" = 2; "TB Icon Size Mode" = 2; "TB Is Shown" = 1; "TB Item Identifiers" = ( "GetMetadata", "NSToolbarFlexibleSpaceItem", "Extract" ); "TB Size Mode" = 1;}'

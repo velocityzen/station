@@ -1,1 +1,1 @@
-sudo npm i eslint -g --prod
+npm i eslint -g --prod

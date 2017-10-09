@@ -83,9 +83,10 @@
     "no-extra-bind": "error",
     "no-extra-label": "error",
     "no-floating-decimal": "error",
-    "no-implicit-coercion": "error",
+    "no-implicit-coercion": ["error", {
+      "allow": ["!!"]
+    }],
     "no-implied-eval": "error",
-    "no-invalid-this": "error",
     "no-iterator": "error",
     "no-labels": "error",
     "no-lone-blocks": "error",

@@ -12,7 +12,6 @@
       "multiline": true
     }],
     "array-bracket-spacing": ["error", "always"],
-    "array-element-newline": ["error", "never"],
     "block-spacing": ["error", "always"],
     "brace-style": ["error", "1tbs", {
       "allowSingleLine": false

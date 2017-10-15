@@ -58,6 +58,8 @@ alias ss='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 
 alias diff='git difftool'
 
+alias dl='youtube-dl -f bestvideo+bestaudio --merge-output-format mkv'
+
 alias please='sudo !!'
 
 alias webdev='open http://localhost:3000'

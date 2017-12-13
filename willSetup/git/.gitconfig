@@ -3,6 +3,8 @@
 [user]
 	name = velocityzen
 	email = velocityzen@gmail.com
+[github]
+  user = velocityzen
 [mergetool "Kaleidoscope"]
 	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 	trustexitcode = true
@@ -22,11 +24,18 @@
 	ui = auto
 [alias]
 	cam = commit -am
-  	a = add --all
-  	branches = for-each-ref --sort=-committerdate --format=\"%(color:blue)%(authordate:relative)\t%(color:red)%(authorname)\t%(color:white)%(color:bold)%(refname:short)\" refs/remotes
-  	p = push
-  	co = checkout
-  	s = status --short
+  a = add --all
+  branches = for-each-ref --sort=-committerdate --format=\"%(color:blue)%(authordate:relative)\t%(color:red)%(authorname)\t%(color:white)%(color:bold)%(refname:short)\" refs/remotes
+  p = push
+  co = checkout
+  s = status --short
+  branches = branch -a --color -v
+  hash = rev-parse --short HEAD
+  lc = log ORIG_HEAD.. --stat --no-merges
+  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  ls = ls-files
+  subs = submodule foreach git pull origin master
+  up = "!git remote update -p; git merge --ff-only @{u}"
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true

@@ -11,6 +11,7 @@ cdf() {
 }
 
 trash() {
+  setopt +o nomatch
   if [[ "$1" =~ ^[-]?[aA]{1}(ll)*$ ]]; then
       sudo rm -rf ~/Library/Logs/*
       sudo rm -rf /Library/Logs/*
@@ -22,6 +23,21 @@ trash() {
   rm -rf ~/.Trash/*
   rm -rf ~/.Trash/.*
   rm -rf ~/Dropbox/.dropbox.cache
+  setopt -o nomatch
+}
+
+time_since_last_commit() {
+  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
+  git log -1 --pretty=format:"%ar" | sed 's/\([0-9]*\) \(.\).*/\1\2/'
+}
+
+g() {
+  if [[ $# > 0 ]]; then
+    git "$@"
+  else
+    echo "Last commit: $(time_since_last_commit) ago"
+    git status --short --branch
+  fi
 }
 
 # directories
@@ -64,7 +80,6 @@ alias dl='youtube-dl -f bestvideo+bestaudio --merge-output-format mkv'
 alias please='sudo !!'
 
 alias webdev='open http://localhost:3000'
-alias g='git'
 alias o='open .'
 alias oo='open'
 

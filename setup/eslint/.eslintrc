@@ -40,7 +40,7 @@
     "linebreak-style": "error",
     "new-parens": "error",
     "newline-per-chained-call": ["error", {
-      "ignoreChainWithDepth": 2
+      "ignoreChainWithDepth": 3
     }],
     "no-lonely-if": "error",
     "no-new-object": "error",

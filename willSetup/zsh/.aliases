@@ -10,19 +10,16 @@ cdf() {
   cd "$(pfd)"
 }
 
-trash() {
+cleanup() {
   setopt +o nomatch
-  if [[ "$1" =~ ^[-]?[aA]{1}(ll)*$ ]]; then
-      sudo rm -rf ~/Library/Logs/*
-      sudo rm -rf /Library/Logs/*
-      sudo rm -rf /var/log/*
-      sudo rm -rf /Volumes/*/.Trashes
-  elif [[ "$1" =~ ^[-]?[uU]{1}(ser)*$ ]]; then
-      rm -rf ~/Library/Logs/*
-  fi
+  sudo rm -rf ~/Library/Logs/*
+  sudo rm -rf /Library/Logs/*
+  sudo rm -rf /var/log/*
+  sudo rm -rf /Volumes/*/.Trashes
   rm -rf ~/.Trash/*
   rm -rf ~/.Trash/.*
   rm -rf ~/Dropbox/.dropbox.cache
+  rm -rf ~/.dropbox
   setopt -o nomatch
 }
 

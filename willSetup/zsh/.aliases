@@ -19,7 +19,6 @@ cleanup() {
   rm -rf ~/.Trash/*
   rm -rf ~/.Trash/.*
   rm -rf ~/Dropbox/.dropbox.cache
-  rm -rf ~/.dropbox
   setopt -o nomatch
 }
 

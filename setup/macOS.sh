@@ -11,6 +11,9 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.serve
 # Set standby delay to 24 hours (default is 1 hour or 3600)
 #sudo pmset -a standbydelay 86400
 
+# Set cloudfare dns
+networksetup -setdnsservers Wi-Fi 1.1.1.1 1.0.0.1
+
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
 

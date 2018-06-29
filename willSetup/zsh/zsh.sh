@@ -11,3 +11,7 @@ fi
 if [ -f ~/.aliases ]; then
   rm -f ~/.aliases
 fi
+
+if [ -f ~/.transfer ]; then
+  rm -f ~/.transfer
+fi

@@ -15,6 +15,7 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/torrent
     zgen oh-my-zsh plugins/doctl
     zgen oh-my-zsh plugins/xcode
+    zgen oh-my-zsh plugins/transfer
     zgen oh-my-zsh plugins/command-not-found
 
     zgen load zsh-users/zsh-syntax-highlighting
@@ -29,5 +30,4 @@ if ! zgen saved; then
     rm -f ~/.zcompdump; compinit
 fi
 
-source ~/.transfer
 source ~/.aliases

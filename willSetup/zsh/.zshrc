@@ -13,6 +13,7 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/npm
     zgen oh-my-zsh plugins/sudo
     zgen oh-my-zsh plugins/torrent
+    zgen oh-my-zsh plugins/doctl
     zgen oh-my-zsh plugins/xcode
     zgen oh-my-zsh plugins/command-not-found
 

@@ -8,17 +8,19 @@ useradd --shell /bin/bash --user-group --groups sudo -m -p $passhash deployer
 
 # firewall
 ufw allow ssh && ufw allow 80/tcp && ufw allow 443/tcp && ufw --force enable
+
+# time sync
 apt-get -y install ntp
 
 # nginx
 source /etc/lsb-release && echo -e "deb http://nginx.org/packages/ubuntu $VERSION_CODENAME nginx \ndeb-src http://nginx.org/packages/ubuntu $VERSION_CODENAME nginx" | tee /etc/apt/sources.list.d/nginx.list
-wget -qO- http://nginx.org/keys/nginx_signing.key | apt-key add -
+curl -sL http://nginx.org/keys/nginx_signing.key | apt-key add -
 
 # nodejs
 curl -sL https://deb.nodesource.com/setup_11.x | sudo -E bash -
 
 # certbot
-add-apt-repository ppa:certbot/certbot
+add-apt-repository -y ppa:certbot/certbot
 
 # rethinkdb
 # source /etc/lsb-release && echo "deb https://dl.bintray.com/rebirthdb/apt $VERSION_CODENAME main" | sudo tee /etc/apt/sources.list.d/rebirthdb.list

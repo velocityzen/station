@@ -36,6 +36,7 @@
   ls = ls-files
   subs = submodule foreach git pull origin master
   up = "!git remote update -p; git merge --ff-only @{u}"
+  first = "!git init && git add . && git commit -am \"🚀\""
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true

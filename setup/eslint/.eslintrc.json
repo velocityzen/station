@@ -2,12 +2,11 @@
   "extends": "eslint:recommended",
 
   "parserOptions": {
-    "ecmaVersion": 8,
+    "ecmaVersion": 10,
     "sourceType": "module"
   },
 
   "env": {
-    "es6": true,
     "node": true,
     "browser": true
   },

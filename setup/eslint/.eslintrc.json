@@ -3,12 +3,16 @@
 
   "parserOptions": {
     "ecmaVersion": 10,
-    "sourceType": "module"
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "impliedStrict": true
+    }
   },
 
   "env": {
     "node": true,
-    "browser": true
+    "browser": true,
+    "es6": true
   },
 
   "rules": {

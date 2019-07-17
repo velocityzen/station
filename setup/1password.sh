@@ -1,1 +1,1 @@
-brew cask install 1password 1password-cli
+brew cask install 1password-cli

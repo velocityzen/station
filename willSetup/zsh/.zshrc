@@ -22,6 +22,8 @@ if ! zgen saved; then
     zgen load zsh-users/zsh-history-substring-search
     zgen load zsh-users/zsh-autosuggestions
 
+    zgen load lukechilds/zsh-nvm
+
     # theme
     zgen oh-my-zsh themes/sorin
 
@@ -31,3 +33,7 @@ if ! zgen saved; then
 fi
 
 source ~/.aliases
+
+# esp
+export PATH=$HOME/Projects/esp/xtensa-esp32-elf/bin:$PATH
+export IDF_PATH=$HOME/Projects/esp/esp-idf

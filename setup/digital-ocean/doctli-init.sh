@@ -17,7 +17,7 @@ source /etc/lsb-release && echo -e "deb http://nginx.org/packages/ubuntu $VERSIO
 curl -sL http://nginx.org/keys/nginx_signing.key | apt-key add -
 
 # nodejs
-curl -sL https://deb.nodesource.com/setup_11.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 
 # certbot
 add-apt-repository -y ppa:certbot/certbot

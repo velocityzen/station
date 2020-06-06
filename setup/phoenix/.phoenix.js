@@ -4,18 +4,28 @@ Phoenix.set({
   openAtLogin: true,
 });
 
-const mCmdAlt = ['cmd', 'alt'];
-const mCmdCtrl = ['cmd', 'ctrl'];
-const mCmdCtrlShift = ['cmd', 'ctrl', 'shift'];
+const keyLeft = 'left';
+const keyRight = 'right';
+const keyUp = 'up';
+const keyDown = 'down';
+const keySpace = 'space';
+const keyMCmdAlt = ['cmd', 'alt'];
+const keyMCmdCtrl = ['cmd', 'ctrl'];
+const keyMCmdCtrlShift = ['cmd', 'ctrl', 'shift'];
 
-const padding = 2;
+const padding = 1;
 // x, y, width, height
 const layout = {
   fullscreen: [0, 0, 1, 1],
   center: [0.15, 0.15, 0.7, 0.7],
   top: [0, 0, 1, 0.5],
   bottom: [0, 0.5, 1, 0.5],
-  left: [0, 0, 0.5, 1],
+  leftOneThird: [0, 0, 0.333, 1],
+  leftHalf: [0, 0, 0.5, 1],
+  leftTwoThirds: [0, 0, 0.666, 1],
+  rightOneThird: [0.666, 0, 0.333, 1],
+  rightHalf: [0.5, 0, 0.5, 1],
+  rightTwoThirds: [0.333, 0, 0.666, 1],
   right: [0.5, 0, 0.5, 1],
   ne: [0, 0, 0.5, 0.5],
   nw: [0.5, 0, 0.5, 0.5],
@@ -23,26 +33,31 @@ const layout = {
   sw: [0.5, 0.5, 0.5, 0.5],
 };
 
-function setLayout(layout, window = Window.focused()) {
+let currentCycleLayoutsId = null;
+let resetCycleLayouts = false;
+
+function setLayout(layout, resetCycle = true, window = Window.focused()) {
+  resetCycleLayouts = resetCycle;
   const screen = Screen.main().flippedVisibleFrame();
 
   window.setFrame({
     x: Math.round(layout[0] * screen.width) + padding + screen.x,
-    y: Math.round(layout[1] * screen.height) + screen.y,
+    y: Math.round(layout[1] * screen.height) + padding + screen.y,
     width: Math.round(layout[2] * screen.width) - 2 * padding,
     height: Math.round(layout[3] * screen.height) - 2 * padding,
   });
 }
 
-function cycleLayouts(...layouts) {
+function cycleLayouts(id, ...layouts) {
   let i = 0;
 
   return () => {
-    if (!layouts[i]) {
+    if (resetCycleLayouts || currentCycleLayoutsId != id || !layouts[i]) {
       i = 0;
     }
 
-    setLayout(layouts[i]);
+    currentCycleLayoutsId = id;
+    setLayout(layouts[i], false);
     i++;
   };
 }
@@ -65,14 +80,38 @@ function bind(key, mods, callback, always) {
 }
 
 //bind sizes
-bind('space', mCmdAlt, cycleLayouts(layout.fullscreen, layout.center));
+bind(
+  keySpace,
+  keyMCmdAlt,
+  cycleLayouts('center', layout.fullscreen, layout.center)
+);
 
-bind('up', mCmdAlt, () => setLayout(layout.top));
-bind('down', mCmdAlt, () => setLayout(layout.bottom));
-bind('left', mCmdAlt, () => setLayout(layout.left));
-bind('right', mCmdAlt, () => setLayout(layout.right));
+bind(keyUp, keyMCmdAlt, () => setLayout(layout.top));
+bind(keyDown, keyMCmdAlt, () => setLayout(layout.bottom));
 
-bind('left', mCmdCtrlShift, () => setLayout(layout.ne));
-bind('left', mCmdCtrl, () => setLayout(layout.se));
-bind('right', mCmdCtrlShift, () => setLayout(layout.nw));
-bind('right', mCmdCtrl, () => setLayout(layout.sw));
+bind(
+  keyLeft,
+  keyMCmdAlt,
+  cycleLayouts(
+    'left',
+    layout.leftHalf,
+    layout.leftOneThird,
+    layout.leftTwoThirds
+  )
+);
+
+bind(
+  keyRight,
+  keyMCmdAlt,
+  cycleLayouts(
+    'right',
+    layout.rightHalf,
+    layout.rightOneThird,
+    layout.rightTwoThirds
+  )
+);
+
+bind(keyLeft, keyMCmdCtrlShift, () => setLayout(layout.ne));
+bind(keyLeft, keyMCmdCtrl, () => setLayout(layout.se));
+bind(keyRight, keyMCmdCtrlShift, () => setLayout(layout.nw));
+bind(keyRight, keyMCmdCtrl, () => setLayout(layout.sw));

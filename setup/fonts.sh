@@ -1,1 +1,1 @@
-brew cask install caskroom/fonts/font-hasklig
+brew cask install caskroom/fonts/font-fira-code

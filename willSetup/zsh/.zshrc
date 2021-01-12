@@ -10,9 +10,13 @@ if ! zgen saved; then
     zgen oh-my-zsh
 
     # plugins
+    zgen oh-my-zsh plugins/asdf
     zgen oh-my-zsh plugins/npm
+    zgen oh-my-zsh plugins/nvm
+    zgen oh-my-zsh plugins/brew
     zgen oh-my-zsh plugins/sudo
     zgen oh-my-zsh plugins/torrent
+    zgen oh-my-zsh plugins/rsync
     zgen oh-my-zsh plugins/doctl
     zgen oh-my-zsh plugins/xcode
     zgen oh-my-zsh plugins/transfer

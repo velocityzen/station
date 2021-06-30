@@ -17,6 +17,7 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/sudo
     zgen oh-my-zsh plugins/torrent
     zgen oh-my-zsh plugins/rsync
+    zgen oh-my-zsh plugins/pyenv
     zgen oh-my-zsh plugins/doctl
     zgen oh-my-zsh plugins/xcode
     zgen oh-my-zsh plugins/transfer
@@ -41,3 +42,6 @@ source ~/.aliases
 # esp
 export PATH=$HOME/Projects/esp/xtensa-esp32-elf/bin:$PATH
 export IDF_PATH=$HOME/Projects/esp/esp-idf
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_COMPLETION_TRIGGER='~~'

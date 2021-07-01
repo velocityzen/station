@@ -28,6 +28,7 @@ if ! zgen saved; then
     zgen load zsh-users/zsh-autosuggestions
 
     zgen load lukechilds/zsh-nvm
+    zgen load wfxr/forgit
 
     # theme
     zgen oh-my-zsh themes/sorin

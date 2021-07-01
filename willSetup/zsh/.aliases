@@ -95,3 +95,9 @@ alias sgrep='grep -R -n -H -C 5 --exclude-dir={.git,.svn,CVS} '
 
 alias t='tail -f'
 
+alias ping='prettyping --nolegend'
+alias n='noti'
+alias preview="fzf --preview 'bat --color \"always\" {}'"
+alias top="htop"
+alias sizes="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
+

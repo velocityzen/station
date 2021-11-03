@@ -1,16 +1,16 @@
 #!/bin/bash
 if [ "$1" = backup ]; then
-  mkdir -p ~/Dropbox/Apps/backups && tar -cZf ~/Dropbox/Apps/backups/ssh.tgz -C ~ .ssh
+  mkdir -p ~/Tresorit/Apps/backups && tar -cZf ~/Tresorit/Apps/backups/ssh.tgz -C ~ .ssh
   exit
 fi
 
 if [ "$1" = restore ]; then
-  tar xzf ~/Dropbox/Apps/backups/ssh.tgz -C ~/
+  tar xzf ~/Tresorit/Apps/backups/ssh.tgz -C ~/
   exit
 fi
 
 if [ "$1" = delete ]; then
-  rm ~/Dropbox/Apps/backups/ssh.tgz
+  rm ~/Tresorit/Apps/backups/ssh.tgz
   exit
 fi
 

@@ -27,30 +27,12 @@ for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
         "/System/Library/CoreServices/Menu Extras/Volume.menu" \
         "/System/Library/CoreServices/Menu Extras/User.menu"
 done
-defaults write com.apple.systemuiserver menuExtras -array \
-    "/System/Library/CoreServices/Menu Extras/AirPort.menu" \
-    "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" \
-    "/System/Library/CoreServices/Menu Extras/Battery.menu" \
-    "/System/Library/CoreServices/Menu Extras/Clock.menu"
-
-# Set highlight color to gray
-defaults write NSGlobalDomain AppleHighlightColor -string "0.847059 0.847059 0.862745"
-
-# Set appearance to Graphite
-defaults write NSGlobalDomain AppleAquaColorVariant -int 6
 
 #dark mode
 osascript -e "tell application \"System Events\" to tell appearance preferences to set dark mode to not dark mode"
 
 # Set sidebar icon size to small
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
-
-# Always show scrollbars
-#defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
-# Possible values: `WhenScrolling`, `Automatic` and `Always`
-
-# Increase window resize speed for Cocoa applications
-# defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
@@ -66,27 +48,8 @@ defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 # Automatically quit printer app once the print jobs complete
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 
-# Disable Resume system-wide
-#defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false
-
-# Disable automatic termination of inactive apps
-#defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
-
-# Disable the crash reporter
-#defaults write com.apple.CrashReporter DialogType -string "none"
-
-# Set Help Viewer windows to non-floating mode
-# defaults write com.apple.helpviewer DevMode -bool true
-
-# Reveal IP address, hostname, OS version, etc. when clicking the clock
-# in the login window
-# sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
-
 # Restart automatically if the computer freezes
 sudo systemsetup -setrestartfreeze on
-
-# Never go into computer sleep mode
-# sudo systemsetup -setcomputersleep Off > /dev/null
 
 # Set the computer to sleep after 60 minutes
 sudo systemsetup -setcomputersleep 60
@@ -122,35 +85,35 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadTwoFin
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRotate -bool true
 
 # Notification Center
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadTwoFingerFromRightEdgeSwipeGesture -int 3
+# defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadTwoFingerFromRightEdgeSwipeGesture -int 3
 
 # Swipe between pages with two fingers
-defaults write NSGlobalDomain AppleEnableSwipeNavigateWithScrolls -bool true
+# defaults write NSGlobalDomain AppleEnableSwipeNavigateWithScrolls -bool true
 
 # Swipe between full-screen apps
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerHorizSwipeGesture -int 2
+# defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerHorizSwipeGesture -int 2
 
 # Enable other multi-finger gestures
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerVertSwipeGesture -int 2
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadFourFingerVertSwipeGesture -int 2
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadFourFingerPinchGesture -int 2
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadFourFingerHorizSwipeGesture -int 2
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadFiveFingerPinchGesture -int 2
+# defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerVertSwipeGesture -int 2
+# defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadFourFingerVertSwipeGesture -int 2
+# defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadFourFingerPinchGesture -int 2
+# defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadFourFingerHorizSwipeGesture -int 2
+# defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadFiveFingerPinchGesture -int 2
 
-defaults write com.apple.dock showMissionControlGestureEnabled -bool true
-defaults write com.apple.dock showAppExposeGestureEnabled -bool true
-defaults write com.apple.dock showDesktopGestureEnabled -bool true
-defaults write com.apple.dock showLaunchpadGestureEnabled -bool true
+# defaults write com.apple.dock showMissionControlGestureEnabled -bool true
+# defaults write com.apple.dock showAppExposeGestureEnabled -bool true
+# defaults write com.apple.dock showDesktopGestureEnabled -bool true
+# defaults write com.apple.dock showLaunchpadGestureEnabled -bool true
 
 # Enable full keyboard access for all controls
 # (e.g. enable Tab in modal dialogs)
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
 # Use scroll gesture with the Ctrl (^) modifier key to zoom
-defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
-defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
+# defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
+# defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
 # Follow the keyboard focus while zoomed in
-defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
+# defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 
 # Disable press-and-hold for keys in favor of key repeat
 # defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false

@@ -1,1 +1,1 @@
-brew cask install calibre
+brew install --cask calibre

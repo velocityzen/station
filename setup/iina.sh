@@ -1,4 +1,4 @@
-brew cask install iina
+brew install --cask iina
 
 defaults write com.colliderli.iina screenShotFolder -string "/Users/velocityzen/Dropbox/Screenshots"
 defaults write com.colliderli.iina SUAutomaticallyUpdate -bool false

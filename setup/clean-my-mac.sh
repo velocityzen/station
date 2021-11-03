@@ -1,1 +1,1 @@
-brew cask install cleanmymac
+brew install --cask cleanmymac

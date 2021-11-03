@@ -1,1 +1,1 @@
-brew cask install sketch
+brew install sketch

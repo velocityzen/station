@@ -1,1 +1,1 @@
-brew cask install dash
+brew install --cask dash

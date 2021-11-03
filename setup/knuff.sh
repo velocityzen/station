@@ -1,1 +1,1 @@
-brew cask install knuff
+brew install --cask knuff

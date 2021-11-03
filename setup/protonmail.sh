@@ -1,1 +1,1 @@
-brew cask install protonmail-bridge
+brew install --cask protonmail-bridge

@@ -1,1 +1,1 @@
-brew cask install soulseek
+brew install --cask soulseek

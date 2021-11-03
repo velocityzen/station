@@ -1,1 +1,1 @@
-brew cask install github
+brew install --cask github

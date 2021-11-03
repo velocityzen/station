@@ -18,7 +18,7 @@ All configurations separated in three folders
 2. setup
 3. didSetup
 
-And will run in exactly this order. When you run a single configuration it will try to run it from these folders in the same order. For example: `./setup dropbox` it will run `willSetup/dropbox.sh`, `setup/dropbox.sh`, `didSetup/dropbox.sh` one after another.
+And will run in exactly this order. When you run a single configuration it will try to run it from these folders in the same order. For example: `./setup app` it will run `willSetup/app.sh`, `setup/app.sh`, `didSetup/app.sh` one after another.
 
 ## Configuration features
 

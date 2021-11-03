@@ -3,10 +3,10 @@
 ###############################################################################
 
 # Set computer name (as done via System Preferences → Sharing)
-sudo scutil --set ComputerName "station"
-sudo scutil --set HostName "station"
-sudo scutil --set LocalHostName "station"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "station"
+# sudo scutil --set ComputerName "station"
+# sudo scutil --set HostName "station"
+# sudo scutil --set LocalHostName "station"
+# sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "station"
 
 # Set standby delay to 24 hours (default is 1 hour or 3600)
 #sudo pmset -a standbydelay 86400
@@ -32,7 +32,7 @@ done
 osascript -e "tell application \"System Events\" to tell appearance preferences to set dark mode to not dark mode"
 
 # Set sidebar icon size to small
-defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
+# defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
 
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true

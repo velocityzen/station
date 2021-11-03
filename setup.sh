@@ -36,7 +36,7 @@ function processSetup {
 }
 
 function processAll {
-  for entry in ./$1/* ;do
+  for entry in ./$1/[^_]* ;do
     processSetup ${entry##*/}
   done
 }

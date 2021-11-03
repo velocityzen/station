@@ -1,1 +1,1 @@
-brew cask install suspicious-package
+brew install suspicious-package

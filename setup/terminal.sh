@@ -1,6 +1,3 @@
-
-defaults write com.apple.Terminal Shell -string "/bin/zsh"
-
 defaults write com.apple.Terminal "Window Settings" -dict-add "Station" "
 <dict>
     <key>ANSIWhiteColor</key>

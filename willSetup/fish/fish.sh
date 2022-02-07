@@ -17,3 +17,5 @@ done
 fish -c "fish_add_path /opt/homebrew/bin"
 curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 fisher install jorgebucaran/autopair.fish
+fisher install oh-my-fish/plugin-wifi-password
+fisher install oh-my-fish/plugin-aws

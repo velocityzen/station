@@ -1,4 +1,4 @@
-function g
+function g -d "git"
   if not set -q $argv
     git $argv
   else

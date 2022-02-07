@@ -5,41 +5,4 @@ alias p='cd ~/Projects'
 alias d='cd ~/Downloads'
 alias cloud='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/'
 
-# brew
-alias bu='brew update; brew upgrade; brew cleanup; brew doctor'
-
-# IP addresses
-alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
-
-# Trim new lines and copy to clipboard
-alias c="tr -d '\n' | pbcopy"
-
-# URL-encode strings
-alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
-
-# Ring the terminal bell, and put a badge on Terminal.app’s Dock icon
-# (useful when executing time-consuming commands)
-alias badge="tput bel"
-
-alias s='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl .'
-alias ss='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
-
 alias diff='git difftool'
-
-alias dl='youtube-dl -f bestvideo+bestaudio --merge-output-format mkv'
-
-alias please='sudo !!'
-
-alias o='open .'
-alias oo='open'
-
-alias grep='grep --color'
-alias sgrep='grep -R -n -H -C 5 --exclude-dir={.git,.svn,CVS} '
-
-alias t='tail -f'
-
-alias ping='prettyping --nolegend'
-alias n='noti'
-alias preview="fzf --preview 'bat --color \"always\" {}'"
-alias top="htop"
-alias sizes="ncdu --color dark -rr -x --exclude .git --exclude node_modules"

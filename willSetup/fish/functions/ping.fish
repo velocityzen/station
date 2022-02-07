@@ -1,3 +1,3 @@
-function ping "Ping"
-  prettyping --nolegend
+function ping -d "Ping"
+  prettyping --nolegend $argv
 end

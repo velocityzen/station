@@ -1,1 +1,1 @@
-brew install --cask google-chrome
+brew install google-chrome

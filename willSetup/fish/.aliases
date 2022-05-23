@@ -5,4 +5,5 @@ alias p='cd ~/Projects'
 alias d='cd ~/Downloads'
 alias cloud='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/'
 
+alias python='python3'
 alias diff='git difftool'

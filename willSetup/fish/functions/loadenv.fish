@@ -1,0 +1,20 @@
+function loadenv
+    set -l envFiles .envrc .env.local .env
+
+    for file in $envFiles
+        if test -e "$PWD/$file"
+            echo "Loading from $file"
+
+            for line in (cat "$PWD/$file" | grep -v '^#')
+                set item (string split -m 1 '=' $line)
+                set -gx $item[1] $item[2]
+                echo "Exported $item[1]"
+            end
+
+            return 0
+        end
+    end
+
+    echo "no env file found"
+    return 1
+end

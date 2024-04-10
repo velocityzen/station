@@ -1,1 +1,1 @@
-brew install youtube-dl ffmpeg
+brew install yt-dlp ffmpeg

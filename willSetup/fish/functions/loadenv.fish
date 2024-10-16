@@ -8,7 +8,7 @@ function loadenv
             for line in (cat "$PWD/$file" | grep -v -e '^#' -e '^[[:space:]]*$')
                 set item (string split -m 1 '=' $line)
                 set -gx $item[1] $item[2]
-                echo "Exported $item[1]"
+                echo "+ $item[1]"
             end
 
             return 0

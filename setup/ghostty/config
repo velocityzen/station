@@ -1,0 +1,14 @@
+font-family = "FiraCode Nerd Font Mono Ret"
+font-family-bold = "FiraCode Nerd Font Mono Bold"
+font-family-italic = "FiraCode Nerd Font Mono Light"
+font-family-bold-italic = "FiraCode Nerd Font Mono SemBd"
+font-size = 13
+
+theme = ayu
+
+window-theme = dark
+window-padding-x = 4
+window-padding-y = 4
+macos-titlebar-style = tabs
+
+auto-update = download

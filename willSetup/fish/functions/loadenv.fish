@@ -5,7 +5,7 @@ function loadenv
         if test -e "$PWD/$file"
             echo "Loading from $file"
 
-            for line in (cat "$PWD/$file" | grep -v '^#')
+            for line in (cat "$PWD/$file" | grep -v -e '^#' -e '^[[:space:]]*$')
                 set item (string split -m 1 '=' $line)
                 set -gx $item[1] $item[2]
                 echo "Exported $item[1]"

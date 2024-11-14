@@ -1,6 +1,6 @@
 brew cask install transmission
 
-defaults write org.m0k.transmission BlocklistURL -string "hhttp://list.iblocklist.com/?list=ydxerpxkpcfqjaybcssw&fileformat=p2p&archiveformat=gz"
+defaults write org.m0k.transmission BlocklistURL -string "http://list.iblocklist.com/?list=ydxerpxkpcfqjaybcssw&fileformat=p2p&archiveformat=gz"
 defaults write org.m0k.transmission BlocklistAutoUpdate -bool true
 defaults write org.m0k.transmission DownloadFolder -string "${HOME}/Downloads"
 defaults write org.m0k.transmission DownloadLocationConstant -bool true

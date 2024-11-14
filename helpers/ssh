@@ -1,16 +1,20 @@
 #!/bin/bash
+
+BACKUP_BASE_PATH="$HOME/Library/Mobile Documents/com~apple~CloudDocs"
+BACKUP_PATH="$BACKUP_BASE_PATH/Apps/backups"
+
 if [ "$1" = backup ]; then
-  mkdir -p ~/Tresorit/Apps/backups && tar -cZf ~/Tresorit/Apps/backups/ssh.tgz -C ~ .ssh
+  mkdir -p "$BACKUP_PATH" && tar -cZf "$BACKUP_PATH/ssh.tgz" -C ~ .ssh
   exit
 fi
 
 if [ "$1" = restore ]; then
-  tar xzf ~/Tresorit/Apps/backups/ssh.tgz -C ~/
+  tar xzf "$BACKUP_PATH/ssh.tgz" -C ~/
   exit
 fi
 
 if [ "$1" = delete ]; then
-  rm ~/Tresorit/Apps/backups/ssh.tgz
+  rm "$BACKUP_PATH/ssh.tgz"
   exit
 fi
 

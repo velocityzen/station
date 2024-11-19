@@ -1,10 +1,11 @@
 # directories
 alias 'bk=cd $OLDPWD'
 
-alias p='cd ~/Projects'
+alias p='cd ~/github'
 alias d='cd ~/Downloads'
 alias cloud='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/'
 
 alias python='python3'
 alias diff='git difftool'
 alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
+alias lt="ls --tree"

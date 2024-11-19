@@ -1,4 +1,4 @@
-brew cask install transmission
+brew install transmission --cask
 
 defaults write org.m0k.transmission BlocklistURL -string "http://list.iblocklist.com/?list=ydxerpxkpcfqjaybcssw&fileformat=p2p&archiveformat=gz"
 defaults write org.m0k.transmission BlocklistAutoUpdate -bool true

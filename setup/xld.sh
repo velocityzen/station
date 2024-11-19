@@ -1,15 +1,8 @@
-brew cask install xld
+brew install xld --cask
 
-defaults write jp.tmkk.XLD OutputFormatName -string "MPEG-4 AAC"
-defaults write jp.tmkk.XLD XLDAacOutput2_Bitrate -int 256
-defaults write jp.tmkk.XLD XLDAacOutput2_Samplerate -int 0
-defaults write jp.tmkk.XLD XLDAacOutput2_VBRQuality -int 65
-defaults write jp.tmkk.XLD XLDAacOutput2_AddGapless -int 1
-defaults write jp.tmkk.XLD XLDAacOutput2_ForceMono -int 0
-defaults write jp.tmkk.XLD XLDAacOutput2_Quality -int 0
-defaults write jp.tmkk.XLD XLDAacOutput2_Mode -int 1
-defaults write jp.tmkk.XLD XLDAacOutput2_AccurateBitrate -int 1
-defaults write jp.tmkk.XLD XLDAacOutput2_UseHE -int 0
+defaults write jp.tmkk.XLD OutputFormatName -string "FLAC;"
+defaults write jp.tmkk.XLD XLDFlacOutput_CompressionLevel -int 8;
+defaults write jp.tmkk.XLD XLDFlacOutput_AllowEmbeddedCueSheet -int 1;
 defaults write jp.tmkk.XLD ForceReadCuesheet -int 1
 defaults write jp.tmkk.XLD AutoQueryCDDB -int 1
 defaults write jp.tmkk.XLD AutoSetCompilation -int 1

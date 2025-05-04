@@ -1,6 +1,6 @@
 [core]
   autocrlf = input
-  pager = diff-so-fancy | less --tabs=4 -RFX
+	pager = diff-so-fancy | less --tabs=4 -RFX
 [user]
   name = Alexey Novikov
   email = v@2dubs.com
@@ -9,7 +9,7 @@
 [push]
   default = current
 [color]
-  ui = true
+	ui = true
 [alias]
   cam = commit -am
   a = add --all

@@ -10,6 +10,7 @@ chsh -s $FISH_PATH
 mkdir -p ~/.config/fish/functions
 echo "set fish_greeting" | tee -a ~/.config/fish/config.fish
 echo "set HOMEBREW_NO_ANALYTICS 1" | tee -a ~/.config/fish/config.fish
+echo "set -gx XDG_CONFIG_HOME \"$HOME/.config\"" | tee -a ~/.config/fish/config.fish
 echo "$STARSHIP_PATH init fish | source" | tee -a ~/.config/fish/config.fish
 echo "source ~/.aliases" | tee -a ~/.config/fish/config.fish
 echo "if test -e ~/.aliases.local

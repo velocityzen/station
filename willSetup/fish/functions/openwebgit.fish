@@ -1,4 +1,4 @@
-function gh --description 'Open the webpage for the current github repo/branch'
+function openwebgit --description 'Open the webpage for the current github repo/branch'
   set -l fetch_url (command git remote --verbose show -n origin 2>/dev/null | command grep Fetch | cut -c 14- )
 
   #did we get an exit status?

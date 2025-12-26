@@ -1,5 +1,7 @@
 function g -d "git"
-  if test (count $argv) -gt 0
+  if test "$argv[1]" = "open"
+    openwebgit
+  else if test (count $argv) -gt 0
     git $argv
   else
     if test -z (git symbolic-ref HEAD 2> /dev/null)

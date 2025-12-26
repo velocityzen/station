@@ -1,1 +1,1 @@
-brew install github
+brew install gh github

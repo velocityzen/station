@@ -4,6 +4,7 @@
 [user]
   name = Alexey Novikov
   email = v@2dubs.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDkGJkk/dT2OCCboJWuuo7+xUWV+hq7V4mgmf6RQKk1R
 [github]
   user = velocityzen
 [push]
@@ -36,3 +37,9 @@
 	diffFilter = diff-so-fancy --patch
 [init]
 	defaultBranch = main
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[commit]
+	gpgsign = true

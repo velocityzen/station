@@ -25,6 +25,10 @@ function unloadsecrets -d "Delete secrets from .github.secrets file from GitHub 
         set -l item (string split -m 1 '=' $line)
         set -l key $item[1]
 
+        if set -q argv[1]; and test "$key" != "$argv[1]"
+            continue
+        end
+
         if test -n "$key"
             echo -n "Deleting $key... "
             if gh secret delete "$key" 2>/dev/null

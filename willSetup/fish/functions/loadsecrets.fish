@@ -26,6 +26,10 @@ function loadsecrets -d "Add secrets from .github.secrets file to GitHub reposit
         set -l key $item[1]
         set -l value $item[2]
 
+        if set -q argv[1]; and test "$key" != "$argv[1]"
+            continue
+        end
+
         if test -n "$key" -a -n "$value"
             echo -n "Setting $key... "
 

@@ -19,6 +19,7 @@ function loadsecrets -d "Add secrets from .github.secrets file to GitHub reposit
         return 1
     end
 
+    set -l base64_extensions .p12 .provisionprofile
     set -l count 0
 
     for line in (cat "$PWD/$secrets_file" | grep -v -e '^#' -e '^[[:space:]]*$')
@@ -33,18 +34,23 @@ function loadsecrets -d "Add secrets from .github.secrets file to GitHub reposit
         if test -n "$key" -a -n "$value"
             echo -n "Setting $key... "
 
-            # If value is a .p12 file path, base64 encode the file
-            if string match -q "*.p12" "$value"
-                if test -e "$value"
-                    set value (base64 -i "$value")
-                else
-                    echo "failed (file not found: $value)"
-                    continue
+            # If value is a file path with a binary extension, base64 encode the file
+            set -l mode string
+            for ext in $base64_extensions
+                if string match -q "*$ext" "$value"
+                    if test -e "$value"
+                        set value (base64 -i "$value")
+                        set mode base64
+                    else
+                        echo "failed (file not found: $value)"
+                        continue 2
+                    end
+                    break
                 end
             end
 
             if echo -n "$value" | gh secret set "$key" 2>/dev/null
-                echo "done"
+                echo "set as $mode"
                 set count (math $count + 1)
             else
                 echo "failed"

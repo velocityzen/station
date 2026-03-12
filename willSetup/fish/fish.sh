@@ -26,5 +26,4 @@ done
 fish -c "fish_add_path $BREW_PREFIX/bin"
 fish -c "fish_add_path /usr/local/sbin"
 fish -c "curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher && \
-  fisher install jorgebucaran/autopair.fish && \
-  fisher install oh-my-fish/plugin-aws"
+  fisher install jorgebucaran/autopair.fish"

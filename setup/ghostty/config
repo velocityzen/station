@@ -12,3 +12,5 @@ window-padding-y = 4
 macos-titlebar-style = tabs
 
 auto-update = download
+
+scrollback-limit = 100000000

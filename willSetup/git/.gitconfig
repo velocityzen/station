@@ -26,7 +26,7 @@
   subs = submodule foreach git pull origin master
   up = "!git remote update -p; git merge --ff-only @{u}"
   first = "!git init && git add . && git commit -am \"🚀\""
-  tags = tag -l
+  tags = "!git tag --sort=creatordate -l | tail -n 5"
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
@@ -44,3 +44,5 @@
 	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
 [commit]
 	gpgsign = true
+[url "git@github.com:"]
+	insteadOf = https://github.com/

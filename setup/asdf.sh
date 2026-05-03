@@ -1,5 +1,6 @@
 brew install asdf
 
-BREW_PREFIX=$(brew --prefix asdf)
+mkdir -p ~/.config/fish/completions
+asdf completion fish > ~/.config/fish/completions/asdf.fish
 
-echo -e "\nsource "$BREW_PREFIX"/libexec/asdf.fish" >> ~/.config/fish/config.fish
+echo -e '\nset -gx ASDF_DATA_DIR "$HOME/.asdf"\nset -gx PATH $ASDF_DATA_DIR/shims $PATH' >> ~/.config/fish/config.fish

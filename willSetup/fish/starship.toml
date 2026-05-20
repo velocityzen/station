@@ -1,0 +1,26 @@
+[git_commit]
+tag_symbol = " \U000F04F9 "  # Nerd Font tag glyph
+tag_disabled = false        # turn tag display on (default is true)
+only_detached = false       # show even when on a branch, not just detached HEAD
+tag_max_candidates = 10     # look back this many commits for a reachable tag
+
+[swift]
+symbol = "\ue699 "                # Nerd Font Swift glyph
+
+[python]
+symbol = "\ue606 "                # Nerd Font Python glyph
+
+[bun]
+symbol = "\ue76f "                # Nerd Font Bun glyph
+
+[deno]
+symbol = "\ue7c0 "                # Nerd Font Deno glyph
+
+[aws]
+symbol = "\ue7ad "                # Nerd Font AWS glyph
+
+[gcloud]
+symbol = "\U000F11F6 "            # Nerd Font Google Cloud glyph
+
+[rust]
+symbol = " "                # Nerd Font Rust glyph

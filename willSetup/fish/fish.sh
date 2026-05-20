@@ -1,8 +1,10 @@
 brew install fish starship
 
-BREW_PREFIX=$(brew --prefix)
-FISH_PATH=$(which fish)
 STARSHIP_PATH=$(which starship)
+mkdir -p ~/.config
+ln -s $PWD/willSetup/fish/starship.toml ~/.config/starship.toml
+
+FISH_PATH=$(which fish)
 
 echo "$FISH_PATH" | sudo tee -a /etc/shells
 chsh -s $FISH_PATH
@@ -23,6 +25,7 @@ for file in $PWD/willSetup/fish/functions/*.fish; do
   ln -s $file ~/.config/fish/functions
 done
 
+BREW_PREFIX=$(brew --prefix)
 fish -c "fish_add_path $BREW_PREFIX/bin"
 fish -c "fish_add_path /usr/local/sbin"
 fish -c "curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher && \

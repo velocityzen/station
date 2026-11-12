@@ -1,5 +1,5 @@
 function resyncfunctions -d "Sync fish functions from station repo to ~/.config/fish/functions"
-    set -l source_dir "$HOME/Github/station/willSetup/fish/functions"
+    set -l source_dir "$HOME/Codes/station/willSetup/fish/functions"
     set -l target_dir "$HOME/.config/fish/functions"
 
     if not test -d "$source_dir"
